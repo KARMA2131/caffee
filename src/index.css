@@ -1,13 +1,399 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+  --default-font: 'Montserrat', sans-serif;
+  --font-color: antiquewhite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+}
+
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  width: 100%;
+  font-family: var(--default-font);
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(60, 50, 50, 0.8);
+  color:  var(--font-color);
+
+  z-index: 9;
+}
+
+.brand-title {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 0px 0 70px;
+}
+
+.brand-title:hover {
+  color: #999;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-right: 70px;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .25rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color:  var(--font-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* Main */
+
+#Main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  background-color: rgb(75, 68, 68);
+
+  background-image: url(../src/img/cofe-main-2.jpg);
+  background-size:cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 60%;
+  height: 80%;
+  padding: 0 75px 0 75px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.tagline {
+  width: 120%;
+  font-size: 250%;
+  margin:  15% 0 5% ;
+  font-family:var(--default-font);
+  cursor: default;
+  color:  var(--font-color);
+}
+
+.time-and-address {
+  width: 100%;
+  padding: 0 70px 0 70px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.time-and-address h3 {
+font-family: var(--default-font);
+color:  var(--font-color);
+font-size: 20px;
+cursor: default;
+}
+
+/* ABOUT */
+
+
+#About  p {
+  font-family:var(--default-font);
+  text-align:justify;
+  font-size: 150%;
+}
+
+ h1 {
+  margin: 60px 0 40px 0;
+  width: 100%;
+  font-family: var(--default-font);
+  cursor: default;
+}
+
+#About img {
+  width: 100%;
+}
+
+.about-text {
+  line-height: 40px;
+}
+
+.note {
+  padding: 20px ;
+  margin-bottom: 40px;
+  border-left: 8px solid #777;
+  background-color: rgb(246, 244, 244);
+}
+
+/* MENU  */
+
+#Menu {
+  line-height: 40px;
+  font-family: var(--default-font);
+}
+
+#Menu img {
+  width: 100%;
+  display: flex;
+  margin-top: 20px ;
+}
+
+
+#tab-container {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px ;
+  display: flex;
+  justify-content: center;
+}
+
+#tab-container button {
+  width: 30%;
+  height: 50%;
+  margin: 15px;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 5px;
+  font-family: var(--default-font);
+  font-size: 20px;
+}
+
+#tab-container button:hover, .active {
+  font-weight: 900;
+  background-color: #fff;
+}
+
+.food-title {
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.tabs {
+  padding: 15px;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.active-tabs  {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.content-tabs {
+  flex-grow : 1;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.active-content {
+  display: block;
+}
+
+
+
+/* Location */
+
+#Location {
+  line-height: 40px;
+  font-family:var(--default-font);
+  margin-bottom: 15px ;
+}
+
+#Location p {
+  font-family:var(--default-font);
+  text-align:justify;
+  font-size: 150%;
+}
+
+#Location img {
+  width: 100%;
+}
+
+
+#Location span {
+  background-color: black;
+  padding: 5px;
+  color: #fff;
+}
+
+#Location form  {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+/* Form */
+
+#Form {
+  font-family: var(--default-font);
+}
+
+#Form form p input {
+  width: 100%;
+  height: 50px;
+  color: #555;
+  font-size: 90%;
+  font-family: var(--default-font);
+}
+
+#Form button {
+display: flex;
+justify-content: center;
+width: 250px;
+height: 30px;
+border: 1px solid rgb(208, 208, 208);
+border-radius: 5px;
+font-family: var(--default-font);
+font-size: 22px;
+}
+
+#Form form {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+#Form form p input {
+  width: 100%;
+  height: 50px;
+  color: #555;
+  font-size: 90%;
+}
+
+#Form button {
+display: flex;
+justify-content: center;
+width: 250px;
+height: 30px;
+border: 1px solid rgb(208, 208, 208);
+border-radius: 5px;
+font-family: var(--default-font);
+font-size: 22px;
+}
+
+#Form button:hover {
+  border: 1px solid #444;
+  background-color: #fff;
+}
+
+/* Footer */
+#Footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#Footer img {
+  width: 100px;
+  margin: 10px;
+  border-radius:50% ;
+  transition: transform .3s;
+}
+
+#Footer img:hover {
+  transform: scale(1.1);
+}
+
+.social-media {
+  margin-bottom: 20px;
+}
+
+.contact-information {
+  display:block;
+}
+
+.contact-information a {
+  font-family: var(--default-font);
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+  margin: 25px 10px 15px 15px;
+}
+
+.contact-information a:hover {
+  color: #444;
 }
