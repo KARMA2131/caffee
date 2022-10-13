@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import NavbarBurger from './NavBurger';
 
 class Header extends Component {
-
   render() {
     return(
       <nav className='navbar'>
@@ -12,7 +10,6 @@ class Header extends Component {
           <span className='bar'></span>
           <span className='bar'></span>
         </a>
-        {/* <NavbarBurger /> */}
         <div className='navbar-links'>
           <ul>
             <li><a href="#Main">Home</a></li>
