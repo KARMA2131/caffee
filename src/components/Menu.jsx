@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Menu() {
 
@@ -13,7 +12,7 @@ function Menu() {
     <div className='container' id="Menu">
       <h1>THE MENU</h1>
 
-        <nav id="tab-container">
+        <div id="tab-container">
           <button
           className={toggleState === 1 ? 'tabs active-tabs' : 'tabs'}
           onClick={() => toggleTab(1)}
@@ -22,7 +21,7 @@ function Menu() {
           className={toggleState === 2 ? 'tabs active-tabs' : 'tabs'}
           onClick={() => toggleTab(2)}
           >Drink</button>
-        </nav>
+        </div>
 
         <div className={toggleState === 1 ? "content  active-content" : "content"}>
           <p className="food-title">Bread Basket</p>

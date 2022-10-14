@@ -17,7 +17,7 @@ body {
 }
 
 
-.navbar {
+/* .navbar {
   width: 100%;
   font-family: var(--default-font);
   display: flex;
@@ -28,19 +28,20 @@ body {
   color:  var(--font-color);
 
   z-index: 9;
-}
+} */
 
+/*
 .brand-title {
   cursor: pointer;
   font-size: 1.5rem;
   margin: 0 0px 0 70px;
-}
+} */
 
-.brand-title:hover {
+/* .brand-title:hover {
   color: #999;
-}
+} */
 
-.navbar-links ul {
+/* .navbar-links ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -56,13 +57,13 @@ body {
   color: var(--font-color);
   padding: 1rem;
   display: block;
-}
+} */
 
-.navbar-links li:hover {
+/* .navbar-links li:hover {
   background-color: #555;
-}
+} */
 
-.toggle-button {
+/* .toggle-button {
   position: absolute;
   top: .25rem;
   right: 1rem;
@@ -71,14 +72,14 @@ body {
   justify-content: space-between;
   width: 30px;
   height: 21px;
-}
+} */
 
-.toggle-button .bar {
+/* .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color:  var(--font-color);
   border-radius: 10px;
-}
+} */
 
 
 /* Main */
@@ -398,7 +399,7 @@ font-size: 22px;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 741px) {
   .container {
     width: 80%;
     display: flex;
@@ -426,7 +427,7 @@ font-size: 22px;
   }
 
   .time-and-address h3 {
-    font-size: small;
+    font-size: 10px;
     display: flex;
     justify-content: space-between;
   }
